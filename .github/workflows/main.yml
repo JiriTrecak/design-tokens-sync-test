@@ -36,8 +36,8 @@ jobs:
           # File path
           path: "./data/tokens.json"
 
-      - name: Synchronize tokens with Supernova
-        run: supernova sync-design-tokens --apiKey="${{ secrets.SN_ACCESS_TOKEN }}" --designSystemId="1956" --input="${{ steps.tokensfile.outputs.content }}" --dev
+      - name: Synchronize tokens with Supernova 
+        run: supernova sync-design-tokens --apiKey="${{ secrets.SN_ACCESS_TOKEN }}" --designSystemId="1956" --inputPath="${{GITHUB_WORKSPACE}}/data/tokens.json" --dev
         
         
         
