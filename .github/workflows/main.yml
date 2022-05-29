@@ -37,7 +37,7 @@ jobs:
           path: "./data/tokens.json"
 
       - name: Synchronize tokens with Supernova
-        run: supernova sync-design-tokens --apiKey="sn.ZODDeOPig3bVqIdWE0m51GEElSqF1cnuiK1ouKYta04h5cbW7qkz4Lk3rLK1yCPybNAxGdet7sB4BirNNCEfw6D2FI11J561" --designSystemId="1956" --input="${{ steps.tokensfile.outputs.content }}" --dev
+        run: supernova sync-design-tokens --apiKey="${{ secrets.SN_ACCESS_TOKEN }}" --designSystemId="1956" --input="${{ steps.tokensfile.outputs.content }}" --dev
         
         
         
