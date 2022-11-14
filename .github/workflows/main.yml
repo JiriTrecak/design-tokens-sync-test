@@ -47,7 +47,7 @@ jobs:
         run: >
           supernova sync-tokens 
           --apiKey="${{ secrets.SN_ACCESS_TOKEN }}"
-          --designSystemId="1956" 
+          --designSystemId="1952" 
           --tokenFilePath "${{ github.workspace }}/single-file-sync/tokens.json" 
           --configFilePath "${{ github.workspace }}/single-file-sync/supernova.settings.json"
           --dev
