@@ -20,7 +20,7 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      # Checks-out your repository under $github.workspace, so your job can access it
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
@@ -42,16 +42,12 @@ jobs:
          
       - name: Install Supernova CLI dependency
         run: npm install --g @supernovaio/cli
-      
-      - name: Read tokens.json file
-        uses: juliangruber/read-file-action@v1.1.4
-        id: tokensfile
-        with:
-          # File path
-          path: "./data/tokens.json"
 
       - name: Synchronize tokens with Supernova 
-        run: supernova sync-design-tokens --apiKey="${{ secrets.SN_ACCESS_TOKEN }}" --designSystemId="1956" --inputPath="${{ github.workspace }}/data/tokens.json" --dev
-        
-        
-        
+        run: supernova sync-tokens |
+             --apiKey="${{ secrets.SN_ACCESS_TOKEN }}"
+             --designSystemId="1956" 
+             --tokenFilePath "${{ github.workspace }}/single-file-sync/tokens.json" 
+             --configFilePath "${{ github.workspace }}/single-file-sync/supernova.settings.json"
+             --dev
+             
