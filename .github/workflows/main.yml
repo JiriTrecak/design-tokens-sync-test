@@ -44,7 +44,8 @@ jobs:
         run: npm install --g @supernovaio/cli
 
       - name: Synchronize tokens with Supernova 
-        run: supernova sync-tokens >
+        run: >
+          supernova sync-tokens 
           --apiKey="${{ secrets.SN_ACCESS_TOKEN }}"
           --designSystemId="1956" 
           --tokenFilePath "${{ github.workspace }}/single-file-sync/tokens.json" 
