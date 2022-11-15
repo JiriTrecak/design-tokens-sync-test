@@ -4,7 +4,7 @@ This repository automatically syncs [Figma Tokens](https://docs.tokens.studio/) 
 
 The synchronization is done through GitHub action that runs every time a new token file (or files) is commited into this repository. It uses [Supernova CLI](https://github.com/Supernova-Studio/cli) to facilitate the synchronization routine. 
 
-- To configure automated sync for yourself, follow the tutorial
+- To configure automated sync for yourself, [follow the tutorial](https://github.com/Supernova-Studio/cli/blob/main/docs/figma-tokens-sync.md)
 - To see what data are being synchronized, visit the [`tokens.json`](https://github.com/JiriTrecak/design-tokens-sync-test/blob/main/single-file-sync/tokens.json) file
 - To see the Figma Tokens <> Supernova mapping, explore the [`supernova.settings.json`](https://github.com/JiriTrecak/design-tokens-sync-test/blob/main/single-file-sync/supernova.settings.json) file
 
