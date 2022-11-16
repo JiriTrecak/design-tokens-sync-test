@@ -50,5 +50,4 @@ jobs:
           --designSystemId="22032" 
           --tokenFilePath "${{ github.workspace }}/single-file-sync/tokens.json" 
           --configFilePath "${{ github.workspace }}/single-file-sync/supernova.settings.json"
-          --dev
              
