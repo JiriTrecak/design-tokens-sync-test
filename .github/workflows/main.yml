@@ -48,6 +48,6 @@ jobs:
           supernova sync-tokens 
           --apiKey="${{ secrets.SN_ACCESS_TOKEN_PROD }}"
           --designSystemId="15505" 
-          --tokenFilePath "${{ github.workspace }}/test/tokens.json" 
-          --configFilePath "${{ github.workspace }}/test/supernova.settings.json"
+          --tokenFilePath "${{ github.workspace }}/test2/tokens.json" 
+          --configFilePath "${{ github.workspace }}/test2/supernova.settings.json"
              
